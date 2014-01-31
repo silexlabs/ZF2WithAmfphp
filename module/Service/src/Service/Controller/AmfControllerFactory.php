@@ -8,7 +8,7 @@
   {
     public function createService(ServiceLocatorInterface $oServiceLocator)
     {
-      $sPath = $oServiceLocator->getServiceLocator()->get('BG_MAINPATH');
+      $sPath = realpath(__DIR__ . '/../../../../../');
 
       return new AmfController($sPath);
     }

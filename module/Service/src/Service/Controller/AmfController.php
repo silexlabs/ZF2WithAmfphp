@@ -18,13 +18,12 @@
 
     public function serverAction()
     {
-      // @TODO Set the path to AMFPHP_ROOT
-      define('AMFPHP_ROOTPATH', $this->_sPath . '../library/Amfphp/' . VERSION_AMF . '/Amfphp/');
+      define('AMFPHP_ROOTPATH', $this->_sPath . '/vendor/amfphp-2.2/Amfphp/');
 
       $oConfig = new Amfphp_Core_Config();
       $oConfig->serviceFolders   = array();
       $oConfig->serviceFolders[] = $this->_sPath . 'module/Service/src/Service/Model/Amf/';
-      
+
       $gateway = Amfphp_Core_HttpRequestGatewayFactory::createGateway($oConfig);
       $gateway->service();
       $gateway->output();
