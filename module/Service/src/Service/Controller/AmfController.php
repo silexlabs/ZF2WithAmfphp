@@ -22,7 +22,7 @@
 
       $oConfig = new Amfphp_Core_Config();
       $oConfig->serviceFolders   = array();
-      $oConfig->serviceFolders[] = $this->_sPath . 'module/Service/src/Service/Model/Amf/';
+      $oConfig->serviceFolders[] = $this->_sPath . '/module/Service/src/Service/Model/Amf/';
 
       $gateway = Amfphp_Core_HttpRequestGatewayFactory::createGateway($oConfig);
       $gateway->service();
