@@ -1,5 +1,8 @@
 <?php
   namespace Service\Model\Amf;
+
+  use Service\Model\Vo\TestVO;
+
   class Test
   {
     /**
@@ -9,7 +12,11 @@
      */
     public function getList()
     {
-      return 'This is a test.';
+      $oVO          = new TestVO();
+      $oVO->subject = 'Test-Subject';
+      $oVO->message = 'This is a test.';
+
+      return $oVO;
     }
   }
 ?>
